@@ -151,7 +151,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/iphone_ipad_apple_watches_stylus_pen_style_99204_3648x2736.jpg');
   text-align: center;
   color: white;
 }
@@ -224,6 +224,8 @@ header .header-content .header-content-inner p {
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  height: 50%;
+  width: 50%;
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
