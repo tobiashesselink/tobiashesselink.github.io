@@ -433,7 +433,6 @@ body {
 }
 @media (min-width: 992px) {
   .pdf-viewer {
-    width: 860px;
-    margin-left: 10px;
+    width: 100%;
   }
 }

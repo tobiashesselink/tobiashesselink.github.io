@@ -4,10 +4,12 @@ function pdf_viewer_transition() {
 
     if (x.style.height === "0px") {
         x.style.height = "950px";
+        x.style.width = "100%";
         x.style.transition = "height 2s";
         y.innerText = "Klik om CV te verbergen";
     } else {
         x.style.height = "0px";
+        x.style.width = "100%";
         x.style.transition = "height 2s";
         y.innerText = "Klik om CV te tonen";
     }
