@@ -16,6 +16,8 @@
     <script type="text/javascript" src="js/javascript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -85,10 +87,10 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading">Welkom</h1>
-            <hr>
-            <p>Bedankt voor het bezoeken van mijn website! </p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Meer over mij!</a>
+            <h1 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" id="homeHeading">Welkom</h1>
+            <hr data-aos="fade-in" data-aos-delay="1000" data-aos-duration="1000">
+            <p data-aos="fade-in" data-aos-delay="2000" data-aos-duration="1000" >Bedankt voor het bezoeken van mijn website! </p>
+            <a href="#about" data-aos="fade-in" data-aos-delay="3000" data-aos-duration="1000" class="btn btn-primary btn-xl page-scroll">Meer over mij!</a>
         </div>
     </div>
 </header>
@@ -99,8 +101,8 @@
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="section-heading">Wie ben ik?</h2>
                 <hr class="light">
-                <p class="text-faded">Ik ben Tobias, een tweede jaars HBO-ICT student. Ik ben 19 jaar oud en kom uit Borne (Overijssel). <br>Omdat ik nu enige kennis heb op het gebied van diverse ontwikkelings platformen, vond ik het leuk om op een creatieve manier software te ontwikkelen. Daarom heb ik in mijn vrije tijd deze website ontwikkeld zodat u meer te weten kan komen over mij. </p>
-                <img src="img/IMG_3081.JPG" class="portfolio-box">
+                <p data-aos="fade-in" data-aos-delay="350" data-aos-duration="1000" class="text-faded">Ik ben Tobias, een tweede jaars HBO-ICT student. Ik ben 19 jaar oud en kom uit Borne (Overijssel). <br>Omdat ik nu enige kennis heb op het gebied van diverse ontwikkelings platformen, vond ik het leuk om op een creatieve manier software te ontwikkelen. Daarom heb ik in mijn vrije tijd deze website ontwikkeld zodat u meer te weten kan komen over mij. </p>
+                <img data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" src="img/IMG_3081.JPG" class="portfolio-box">
             </div>
         </div>
     </div>
@@ -117,7 +119,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 text-center">
+            <div data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000" class="col-lg-6 col-md-6 text-center">
                 <div class="service-box">
                     <br>
                     <h3>Piano</h3>
@@ -128,7 +130,7 @@
                         dan kunt u via <a class="page-scroll" href="#contact">hier</a> met mij in contact komen.</p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 text-center">
+            <div data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000" class="col-lg-6 col-md-6 text-center">
                 <div class="service-box">
                     <br>
                     <h3>Software ontwikkelaar</h3>
@@ -144,7 +146,7 @@
 </section>
 
 <aside class="bg-dark">
-    <div class="container text-center">
+    <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" class="container text-center">
             <h1 style="color:#fff;">The science of today is the technology of tomorrow</h1>
     </div>
 </aside>
@@ -170,7 +172,7 @@
                     Dan zou ik het erg waarderen als u contact met mij zou opnemen d.m.v. <a href="#contact" class="page-scroll text-faded"><u>deze contact gegevens.</u></a>
                     <br>
                     <br>
-                    <a id="pdf_button" onclick="pdf_viewer_transition()" class="btn btn-primary btn-xl page-scroll for-desktop" style="background-color: black" >Klik hier voor mijn CV</a>
+                    <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" id="pdf_button" onclick="pdf_viewer_transition()" class="btn btn-primary btn-xl page-scroll for-desktop" style="background-color: black" >Klik hier voor mijn CV</a>
                     <a class="for-mobile" href="img/CV%20Tobias%20Hesselink.pdf" target="_blank" style="color: black"><b><u>PDF-viewer wordt alleen ondersteund op grotere devices, klik hier om mijn CV te openen</u></b></a>
                     <!--<p class="text-faded" style="font-size: 13px">(PDF bestanden kunnen mogelijk verkeerd getoond worden op mobiele apparaten)</p>-->
                 </p>
@@ -221,5 +223,10 @@
 
 <!-- Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body></html>
