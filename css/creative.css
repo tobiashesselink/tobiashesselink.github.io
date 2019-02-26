@@ -436,3 +436,16 @@ body {
     width: 100%;
   }
 }
+
+.for-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .for-desktop {
+    display: none;
+  }
+  .for-mobile {
+    display: block;
+  }
+}
