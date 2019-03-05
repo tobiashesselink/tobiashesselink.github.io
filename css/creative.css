@@ -160,10 +160,8 @@ header {
   background-image: url('../img/iphone_ipad_apple_watches_stylus_pen_style_99204_3648x2736.jpg');
   text-align: center;
   color: white;
-  /*background-attachment: fixed;*/
-  /*background-position: center;*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 header .header-content {
   position: relative;
