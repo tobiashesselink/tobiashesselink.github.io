@@ -10,16 +10,38 @@
 <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
 
 <!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 
+<!-- Link stylesheets-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="index.css">
 
-<script>
+<!-- BODY -->
+<div class="page_wrapper">
+    <header class="head group">
+        <div class="head_wrapper group">
+            <div class="logo"><h1>Arrows leaderboard</h1></div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="wrapper">
+            <div class="banner_content">
+                <div class="banner_wrapper">
+                    <div class="container">
+                        <h2 class="title"><img src="http://findicons.com/files/icons/2799/flat_icons/256/trophy.png">
+                            TOP 100 LEADERBOARD</h2>
+                        <ol id="board" class="leaderboard">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</div>
+
+<script>
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyDkc-UuO3DKmPRaSdy8yvH72IgiWA6346c",
@@ -38,14 +60,18 @@
     // List with users
     var users = [];
 
+    // Set loading sign
+    document.getElementById('board').innerHTML = `
+    <div class="row justify-content-md-center">Loading...</div>
+    `
+
     // Read data
     database.ref('/users/').orderByChild('leaderboard_highscore').limitToLast(100).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
 
             var childData = childSnapshot.val();
             // console.log(childData)
-            users.push({username: childData.username, highscore: childData.leaderboard_highscore})
-
+            users.push({username: childData.username, highscore: childData.leaderboard_highscore});
         });
 
         // Data retrieved from db
@@ -54,43 +80,44 @@
         // Sort the list based on highscores
         users.sort(function (a, b) {
             return b.highscore - a.highscore;
-        })
+        });
 
-        // Show data
-        var elList = document.getElementById('leaderboard');
-        elList.innerHTML = ``;
-        var high_label = document.getElementById("highscore_label");
-        var user_label = document.getElementById("username_label");
+        // Position number
+        var x;
 
-        // Loop through the users and add html parts to the list
-        for (var i = 0; i < users.length; i++) {
-            let obj = users[i];
-            elList.innerHTML += `<div class="row justify-content-md-center">
-            <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
-            <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
-        </div>`
+        // Just before we load the data into the html, remove the loading sign
+        document.getElementById('board').innerHTML = ``;
 
+        // Show data in the leaderboard
+        for (x in users) {
+            document.getElementById('board').innerHTML +=
+                '<li class="rank">' +
+                '<h2 class="name">'
+                + users[x].username +
+                '</h2>' +
+                '<strong class="pts">'
+                + users[x].highscore +
+                '</strong></li>';
         }
+
+        // // Show data
+        // var elList = document.getElementById('leaderboard');
+        // elList.innerHTML = ``;
+        // var high_label = document.getElementById("highscore_label");
+        // var user_label = document.getElementById("username_label");
+        //
+        // // Loop through the users and add html parts to the list
+        // for (var i = 0; i < users.length; i++) {
+        //     let obj = users[i];
+        //     elList.innerHTML += `<div class="row justify-content-md-center">
+        //     <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
+        //     <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
+        // </div>`
+        //
+        // }
     });
 
 </script>
-
-<div class="container" style="background-color: white; margin-top: 30px">
-    <div class="row justify-content-md-center">
-        <div style="font-size: 75px">Soon online..</div>
-    </div>
-    <div class="row justify-content-md-center">
-    <div style="font-size: 30px">Coming leaderboards for Arrows</div>
-    </div>
-    <div class="row justify-content-md-center">
-    <a href="itms-services://?action=download-manifest&url=https://tobiashesselink.nl/arrows/app.plist"
-       style="font-size: 30px">Download App</a>
-    </div>
-</div>
-<div class="container" style="background-color: white; margin-top: 50px" id="leaderboard">
-    <!-- Content for leaderboard -->
-    <div class="row justify-content-md-center">Loading...</div>
-</div>
 
 </body>
 </html>
