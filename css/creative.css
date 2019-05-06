@@ -462,6 +462,36 @@ body {
 }
 
 .section-fullscreen {
-    min-height: 100%;
+  min-height: 100%;
 
+}
+
+.portfolio-page {
+  height: 100%;
+  background-color: #353535;
+}
+
+.portfolio-item {
+  /*position: relative;*/
+  height: 250px;
+  width: 250px;
+  /*background-color: #fff;*/
+  transition-duration: 0.4s;
+  border-radius: 25%;
+}
+
+
+#portfolio-item:hover + #overlay{
+opacity:0;
+}
+
+.overlay {
+  /*position: fixed;*/
+  height: 250px;
+  width: 250px;
+  transition-duration: 0.4s;
+  border-radius: 25%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #008CBA;
 }
