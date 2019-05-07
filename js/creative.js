@@ -28,7 +28,22 @@
         }
     })
 
+    // $(".portfolio-item").hover(
+    //     function(event) {
+    //         // The mouse has entered the element, can reference the element via 'this'
+    //         console.log(this.)
+    //     },
+    //     function (event) {
+    //         // The mouse has left the element, can reference the element via 'this'
+    //     }
+    // );
 
+    // $('#portfolio-item,#overlay').mouseenter(function(){
+    //     $('#overlay').show();
+    // });
+    // $('#portfolio-item,#overlay').mouseleave(function(){
+    //     $('#overlay').hide();
+    // });
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
     $('.popup-gallery').magnificPopup({
