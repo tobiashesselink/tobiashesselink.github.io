@@ -547,7 +547,6 @@ body {
 
 .overlay-wrapper {
     position: relative;
-    /*height: 350px;*/
 }
 
 .portfolio-page {
@@ -571,10 +570,10 @@ body {
     transition: .5s ease;
 }
 
-.portfolio-item:hover {
-    left: 0;
-    margin-left: 0;
-}
+/*.portfolio-item:hover {*/
+    /*left: 0;*/
+    /*margin-left: 0;*/
+/*}*/
 
 .portfolio-item,
 .overlay,
@@ -583,7 +582,7 @@ body {
 }
 
 .overlay {
-    height: 350px;
+    height: 250px;
     width: 100%;
     border: 2px solid white;
     border-radius: 60px;
@@ -592,11 +591,8 @@ body {
     opacity: 0;
 }
 
-.overlay:hover ~ .portfolio-item {
-    left: 0;
-    margin-left: -125px;
-}
-
-.overlay:hover {
-    opacity: 1;
+.overlay-text {
+    /*font-size: 30px;*/
+    color: #fff;
+    margin-left: 275px;
 }
