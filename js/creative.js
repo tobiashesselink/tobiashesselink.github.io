@@ -62,27 +62,31 @@
     });
 
     $(function() {
-        $('.overlay').hover(function() {
-            $('.portfolio-item').css('left', '0');
-            $('.portfolio-item').css('margin-left', '0');
-            $('.overlay').css('opacity', '1');
-        }, function() {
-            // on mouseout, reset the background colour
-            $('.portfolio-item').css('left', '50%');
-            $('.portfolio-item').css('margin-left', '-125px');
-            $('.overlay').css('opacity', '0');
-        });
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            $('.overlay').hover(function() {
+                $('.portfolio-item').css('left', '0');
+                $('.portfolio-item').css('margin-left', '0');
+                $('.overlay').css('opacity', '1');
+            }, function() {
+                // on mouseout, reset the background colour
+                $('.portfolio-item').css('left', '50%');
+                $('.portfolio-item').css('margin-left', '-125px');
+                $('.overlay').css('opacity', '0');
+            });
 
-        $('.portfolio-item').hover(function() {
-            $('.portfolio-item').css('left', '0');
-            $('.portfolio-item').css('margin-left', '0');
-            $('.overlay').css('opacity', '1');
-        }, function() {
-            // on mouseout, reset the background colour
-            $('.portfolio-item').css('left', '50%');
-            $('.portfolio-item').css('margin-left', '-125px');
-            $('.overlay').css('opacity', '0');
-        });
+            $('.portfolio-item').hover(function() {
+                $('.portfolio-item').css('left', '0');
+                $('.portfolio-item').css('margin-left', '0');
+                $('.overlay').css('opacity', '1');
+            }, function() {
+                // on mouseout, reset the background colour
+                $('.portfolio-item').css('left', '50%');
+                $('.portfolio-item').css('margin-left', '-125px');
+                $('.overlay').css('opacity', '0');
+            });
+        } else {
+            //...
+        }
     });
 
 })(jQuery); // End of use strict
