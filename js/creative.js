@@ -61,4 +61,13 @@
         }
     });
 
+    $(function() {
+        $('.overlay').hover(function() {
+            $('.portfolio-item').css('background-color', 'yellow');
+        }, function() {
+            // on mouseout, reset the background colour
+            $('.portfolio-item').css('background-color', '');
+        });
+    });
+
 })(jQuery); // End of use strict
