@@ -72,21 +72,47 @@
                 $('.portfolio-item').css('left', '50%');
                 $('.portfolio-item').css('margin-left', '-125px');
                 $('.overlay').css('opacity', '0');
+                $('.overlay').css('visibility', 'hidden');
             });
 
             $('.portfolio-item').hover(function() {
+                stopCursorAnimation();
                 $('.portfolio-item').css('left', '0');
                 $('.portfolio-item').css('margin-left', '0');
                 $('.overlay').css('opacity', '1');
+                $('.overlay').css('visibility', 'visible');
             }, function() {
                 // on mouseout, reset the background colour
                 $('.portfolio-item').css('left', '50%');
                 $('.portfolio-item').css('margin-left', '-125px');
                 $('.overlay').css('opacity', '0');
             });
+
+            moveCursorAnimation()
+
         } else {
             //...
         }
     });
+
+    function moveCursorAnimation() {
+            $('.mouse').animate({
+                left: '50%',
+                top: '125px',
+                opacity: '1',
+            },1500, function () {
+                $('.mouse').css('left', '90%');
+                $('.mouse').css('top', '0');
+                $('.mouse').css('opacity', '0');
+                moveCursorAnimation()
+            });
+    }
+
+    function stopCursorAnimation() {
+        $('.mouse').css('opacity', '0');
+        $('.mouse').css('visible', 'none');
+        $('.mouse').css('z-index', '0');
+        $('.mouse').stop()
+    }
 
 })(jQuery); // End of use strict

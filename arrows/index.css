@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'helvetica';
-
+    background-color: #F05F40;
 }
 
 .page_wrapper {

@@ -583,7 +583,13 @@ body {
     position: absolute;
 }
 
+@media (max-width: 992px) {
+    .overlay {
+        display: none;
+    }
+}
 .overlay {
+    visibility: hidden;
     height: 250px;
     width: 100%;
     border: 2px solid white;
@@ -615,4 +621,19 @@ p.overlay-text-descr {
     top: 30px;
     margin-right: 65px;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.mouse {
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 90%;
+    top: 0;
+    margin-left: -25px;
+    margin-top: -25px;
+    z-index: 10;
+    opacity: 0;
+    border-radius: 50%;
+    /*border: 2px solid black;*/
 }
