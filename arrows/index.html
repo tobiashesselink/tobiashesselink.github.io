@@ -6,30 +6,52 @@
 </head>
 <body>
 
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+<!--&lt;!&ndash; Firebase App (the core Firebase SDK) is always required and must be listed first &ndash;&gt;-->
+<!--<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>-->
 
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+<!--&lt;!&ndash; Add Firebase products that you want to use &ndash;&gt;-->
+<!--<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>-->
 
 <!-- Link stylesheets-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="index.css">
 
-<!-- BODY -->
-<!--<div class="page_wrapper">-->
-<!--<header class="head group">-->
-<!--<div class="head_wrapper group">-->
-<!--<div class="logo"><h1>Arrows leaderboard</h1></div>-->
+<!-- Bootstrap Core CSS -->
+<!--<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+
+<div class="page_wrapper">
+    <header class="head group">
+        <div class="head_wrapper group">
+            <div class="logo"><h1>Arrows</h1></div>
+        </div>
+    </header>
+</div>
+
+<!--<section id="info" style="margin-top: 20px">-->
+<!--<div class="container box">-->
+<!--<div class="row" style="padding: 35px">-->
+<!--<img src="logo.png" class="logo">-->
+<!--<div class="app-store-button">-->
+<!--<img src="app-store.png" class="app-store-logo">-->
+<!--<p class="app-store-label">Available in the App Store</p>-->
 <!--</div>-->
-<!--</header>-->
+<!--</div>-->
+<!--<div class="row" style="padding: 35px">-->
+<!--informatie-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+<!--<section id="leaderboard" style="width: 100%;">-->
+<!--<div class="page_wrapper">-->
 <!--<div class="banner">-->
 <!--<div class="wrapper">-->
 <!--<div class="banner_content">-->
 <!--<div class="banner_wrapper">-->
-<!--<div class="container">-->
-<!--<h2 class="title"><img src="http://findicons.com/files/icons/2799/flat_icons/256/trophy.png">-->
+<!--<div class="container-lb">-->
+<!--<h2 class="title"><img-->
+<!--src="http://findicons.com/files/icons/2799/flat_icons/256/trophy.png">-->
 <!--TOP 100 LEADERBOARD</h2>-->
 <!--<ol id="board" class="leaderboard">-->
 <!--</ol>-->
@@ -39,90 +61,93 @@
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
+<!--</section>-->
 
 <!-- MAINTENANCE OPTION -->
-    <div style="top: 25%; position:absolute;">
-        <h1 style="font-weight: bold">Binnenkort online</h1>
-        <hr style="border: 1px solid black;">
-        <p class="text-center">Bedankt voor uw begrip </p>
-    </div>
+<div class="container" style="text-align: center; margin-top: 100px">
+    <!--<div class="row">-->
+    <h1 style="font-weight: bold">Binnenkort online</h1>
+    <hr style="border: 1px solid black; margin: auto;">
+    <p class="text-center">Bedankt voor uw begrip </p>
+    <!--</div>-->
+</div>
 <!-- END -->
 
 <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDkc-UuO3DKmPRaSdy8yvH72IgiWA6346c",
-        authDomain: "arrowsgame-6eb49.firebaseapp.com",
-        databaseURL: "https://arrowsgame-6eb49.firebaseio.com",
-        projectId: "arrowsgame-6eb49",
-        storageBucket: "arrowsgame-6eb49.appspot.com",
-        messagingSenderId: "992545119460"
-    };
-    firebase.initializeApp(config);
-
-    // Get a reference to the database service
-    var database = firebase.database();
-    console.log("Retreiving users from database");
-
-    // List with users
-    var users = [];
-
-    // Set loading sign
-    document.getElementById('board').innerHTML = `
-    <div class="row justify-content-md-center">Loading...</div>
-    `
-
-    // Read data
-    database.ref('/users/').orderByChild('leaderboard_highscore').limitToLast(100).once('value').then(function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-
-            var childData = childSnapshot.val();
-            // console.log(childData)
-            users.push({username: childData.username, highscore: childData.leaderboard_highscore});
-        });
-
-        // Data retrieved from db
-        console.log("Retrieved users");
-
-        // Sort the list based on highscores
-        users.sort(function (a, b) {
-            return b.highscore - a.highscore;
-        });
-
-        // Position number
-        var x;
-
-        // Just before we load the data into the html, remove the loading sign
-        document.getElementById('board').innerHTML = ``;
-
-        // Show data in the leaderboard
-        for (x in users) {
-            document.getElementById('board').innerHTML +=
-                '<li class="rank">' +
-                '<h2 class="name">'
-                + users[x].username +
-                '</h2>' +
-                '<strong class="pts">'
-                + users[x].highscore +
-                '</strong></li>';
-        }
-
-        // // Show data
-        // var elList = document.getElementById('leaderboard');
-        // elList.innerHTML = ``;
-        // var high_label = document.getElementById("highscore_label");
-        // var user_label = document.getElementById("username_label");
-        //
-        // // Loop through the users and add html parts to the list
-        // for (var i = 0; i < users.length; i++) {
-        //     let obj = users[i];
-        //     elList.innerHTML += `<div class="row justify-content-md-center">
-        //     <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
-        //     <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
-        // </div>`
-        //
-        // }
-    });
+    // // Initialize Firebase
+    // var config = {
+    //     apiKey: "AIzaSyDkc-UuO3DKmPRaSdy8yvH72IgiWA6346c",
+    //     authDomain: "arrowsgame-6eb49.firebaseapp.com",
+    //     databaseURL: "https://arrowsgame-6eb49.firebaseio.com",
+    //     projectId: "arrowsgame-6eb49",
+    //     storageBucket: "arrowsgame-6eb49.appspot.com",
+    //     messagingSenderId: "992545119460"
+    // };
+    // firebase.initializeApp(config);
+    //
+    // // Get a reference to the database service
+    // var database = firebase.database();
+    // console.log("Retreiving users from database");
+    //
+    // // List with users
+    // var users = [];
+    //
+    // // Set loading sign
+    // document.getElementById('board').innerHTML = `
+    // <div class="row justify-content-md-center">Loading...</div>
+    // `
+    //
+    // // Read data
+    // database.ref('/users/').orderByChild('leaderboard_highscore').limitToLast(100).once('value').then(function (snapshot) {
+    //     snapshot.forEach(function (childSnapshot) {
+    //
+    //         var childData = childSnapshot.val();
+    //         // console.log(childData)
+    //         users.push({username: childData.username, highscore: childData.leaderboard_highscore});
+    //     });
+    //
+    //     // Data retrieved from db
+    //     console.log("Retrieved users");
+    //
+    //     // Sort the list based on highscores
+    //     users.sort(function (a, b) {
+    //         return b.highscore - a.highscore;
+    //     });
+    //
+    //     // Position number
+    //     var x;
+    //
+    //     // Just before we load the data into the html, remove the loading sign
+    //     document.getElementById('board').innerHTML = ``;
+    //
+    //     // Show data in the leaderboard
+    //     for (x in users) {
+    //         document.getElementById('board').innerHTML +=
+    //             '<li class="rank">' +
+    //             '<h2 class="name">'
+    //             + users[x].username +
+    //             '</h2>' +
+    //             '<strong class="pts">'
+    //             + users[x].highscore +
+    //             '</strong></li>';
+    //     }
+    //
+    //     // // Show data
+    //     // var elList = document.getElementById('leaderboard');
+    //     // elList.innerHTML = ``;
+    //     // var high_label = document.getElementById("highscore_label");
+    //     // var user_label = document.getElementById("username_label");
+    //     //
+    //     // // Loop through the users and add html parts to the list
+    //     // for (var i = 0; i < users.length; i++) {
+    //     //     let obj = users[i];
+    //     //     elList.innerHTML += `<div class="row justify-content-md-center">
+    //     //     <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
+    //     //     <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
+    //     // </div>`
+    //     //
+    //     // }
+    // });
 
 </script>
 
