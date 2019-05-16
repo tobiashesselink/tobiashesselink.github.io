@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Arrows</title>
+    <title>Arrows | IOS | Game</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="height=device-height, initial-scale=1">
+
+    <!--&lt;!&ndash; Firebase App (the core Firebase SDK) is always required and must be listed first &ndash;&gt;-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+
+    <!--&lt;!&ndash; Add Firebase products that you want to use &ndash;&gt;-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+
+    <!-- Link stylesheets-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
+            integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+
 </head>
+
+<!------------------------ BODY ------------------------>
 <body>
-
-<!--&lt;!&ndash; Firebase App (the core Firebase SDK) is always required and must be listed first &ndash;&gt;-->
-<!--<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>-->
-
-<!--&lt;!&ndash; Add Firebase products that you want to use &ndash;&gt;-->
-<!--<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>-->
-
-<!-- Link stylesheets-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="index.css">
-
-<!-- Bootstrap Core CSS -->
-<!--<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">-->
 
 <div class="page_wrapper">
     <header class="head group">
@@ -34,15 +41,18 @@
             <img src="logo.png" class="logo center-logo">
         </div>
         <div class="row">
-<!--            <div class="app-store-button">-->
-<!--                <img src="app-store.png" class="app-store-logo">-->
-<!--                <p class="app-store-label">Available in the App Store</p>-->
-<!--            </div>-->
+            <!--            <div class="app-store-button">-->
+            <!--                <img src="app-store.png" class="app-store-logo">-->
+            <!--            <i class="fab fa-app-store-ios app-store-logo-svg"></i>-->
+            <!--                <p class="app-store-label">Available in the App Store</p>-->
+            <!--            </div>-->
         </div>
         <hr style="margin-top: 50px;">
-        <div class="row main-top-info text-faded">
-            <p class="text-faded alinea-header-big">Mijn eerste IOS applicatie</p>
-            <p class="main-top-info-text">Deze IOS game heb ik mijn vrije tijd ontwikkeld om ervaring op te doen op het
+        <div class="row main-center-info text-faded">
+            <!--            <p class="text-faded alinea-header">Mijn eerste IOS applicatie</p>-->
+            <p class="main-top-info-text text-faded">Deze IOS game heb ik in mijn vrije tijd ontwikkeld om ervaring op
+                te doen op
+                het
                 gebied van IOS development. Bij dit project heb ik gebruik gemaakt van het Sprite-Kit framework en
                 Firebase (online database van
                 Google).</p>
@@ -61,10 +71,10 @@
             </p>
             <p class="text-faded alinea-header">Leaderboard systeem</p>
             <p class="main-center-info text-faded">Het mooie aan FireBase is dat je ook je data kan ophalen op een
-                website of een ander operating system. Om er een kleine competitieve draai aan te geven heb ik een
-                webpagina gemaakt waarin de beste score's te zien zijn. Zo kunnen de 100 beste mensen laten zien hoe
-                goed zij zijn in dit spel. Onderaan de pagina is het <a href="#leaderboard"
-                                                                        class="page-scroll text-faded"><u>leaderboard</u></a>
+                website of een ander operating system. Om er een kleine competitieve draai aan te geven, heb ik een
+                webpagina gemaakt waarin de beste score's te zien zijn met de bijbehorende naam die zij opgegeven hebben
+                bij het starten van het spel. Onderaan de pagina is het <a href="#leaderboard"
+                                                                           class="page-scroll text-faded"><u>leaderboard</u></a>
                 te vinden.
             </p>
         </div>
@@ -117,80 +127,80 @@
 <!-- END -->
 
 <script>
-    // // Initialize Firebase
-    // var config = {
-    //     apiKey: "AIzaSyDkc-UuO3DKmPRaSdy8yvH72IgiWA6346c",
-    //     authDomain: "arrowsgame-6eb49.firebaseapp.com",
-    //     databaseURL: "https://arrowsgame-6eb49.firebaseio.com",
-    //     projectId: "arrowsgame-6eb49",
-    //     storageBucket: "arrowsgame-6eb49.appspot.com",
-    //     messagingSenderId: "992545119460"
-    // };
-    // firebase.initializeApp(config);
-    //
-    // // Get a reference to the database service
-    // var database = firebase.database();
-    // console.log("Retreiving users from database");
-    //
-    // // List with users
-    // var users = [];
-    //
-    // // Set loading sign
-    // document.getElementById('board').innerHTML = `
-    // <div class="row justify-content-md-center">Loading...</div>
-    // `
-    //
-    // // Read data
-    // database.ref('/users/').orderByChild('leaderboard_highscore').limitToLast(100).once('value').then(function (snapshot) {
-    //     snapshot.forEach(function (childSnapshot) {
-    //
-    //         var childData = childSnapshot.val();
-    //         // console.log(childData)
-    //         users.push({username: childData.username, highscore: childData.leaderboard_highscore});
-    //     });
-    //
-    //     // Data retrieved from db
-    //     console.log("Retrieved users");
-    //
-    //     // Sort the list based on highscores
-    //     users.sort(function (a, b) {
-    //         return b.highscore - a.highscore;
-    //     });
-    //
-    //     // Position number
-    //     var x;
-    //
-    //     // Just before we load the data into the html, remove the loading sign
-    //     document.getElementById('board').innerHTML = ``;
-    //
-    //     // Show data in the leaderboard
-    //     for (x in users) {
-    //         document.getElementById('board').innerHTML +=
-    //             '<li class="rank">' +
-    //             '<h2 class="name">'
-    //             + users[x].username +
-    //             '</h2>' +
-    //             '<strong class="pts">'
-    //             + users[x].highscore +
-    //             '</strong></li>';
-    //     }
-    //
-    //     // // Show data
-    //     // var elList = document.getElementById('leaderboard');
-    //     // elList.innerHTML = ``;
-    //     // var high_label = document.getElementById("highscore_label");
-    //     // var user_label = document.getElementById("username_label");
-    //     //
-    //     // // Loop through the users and add html parts to the list
-    //     // for (var i = 0; i < users.length; i++) {
-    //     //     let obj = users[i];
-    //     //     elList.innerHTML += `<div class="row justify-content-md-center">
-    //     //     <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
-    //     //     <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
-    //     // </div>`
-    //     //
-    //     // }
-    // });
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDkc-UuO3DKmPRaSdy8yvH72IgiWA6346c",
+        authDomain: "arrowsgame-6eb49.firebaseapp.com",
+        databaseURL: "https://arrowsgame-6eb49.firebaseio.com",
+        projectId: "arrowsgame-6eb49",
+        storageBucket: "arrowsgame-6eb49.appspot.com",
+        messagingSenderId: "992545119460"
+    };
+    firebase.initializeApp(config);
+
+    // Get a reference to the database service
+    var database = firebase.database();
+    console.log("Retreiving users from database");
+
+    // List with users
+    var users = [];
+
+    // Set loading sign
+    document.getElementById('board').innerHTML = `
+    <div class="row justify-content-md-center">Loading...</div>
+    `
+
+    // Read data
+    database.ref('/users/').orderByChild('leaderboard_highscore').limitToLast(100).once('value').then(function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+
+            var childData = childSnapshot.val();
+            // console.log(childData)
+            users.push({username: childData.username, highscore: childData.leaderboard_highscore});
+        });
+
+        // Data retrieved from db
+        console.log("Retrieved users");
+
+        // Sort the list based on highscores
+        users.sort(function (a, b) {
+            return b.highscore - a.highscore;
+        });
+
+        // Position number
+        var x;
+
+        // Just before we load the data into the html, remove the loading sign
+        document.getElementById('board').innerHTML = ``;
+
+        // Show data in the leaderboard
+        for (x in users) {
+            document.getElementById('board').innerHTML +=
+                '<li class="rank">' +
+                '<h2 class="name">'
+                + users[x].username +
+                '</h2>' +
+                '<strong class="pts">'
+                + users[x].highscore +
+                '</strong></li>';
+        }
+
+        // // Show data
+        // var elList = document.getElementById('leaderboard');
+        // elList.innerHTML = ``;
+        // var high_label = document.getElementById("highscore_label");
+        // var user_label = document.getElementById("username_label");
+        //
+        // // Loop through the users and add html parts to the list
+        // for (var i = 0; i < users.length; i++) {
+        //     let obj = users[i];
+        //     elList.innerHTML += `<div class="row justify-content-md-center">
+        //     <div class="col col-lg-2 blocklb" id="highscore_label">${obj.highscore}</div>
+        //     <div class="col col-lg-3 blocklb" id="username_label">${obj.username}</div>
+        // </div>`
+        //
+        // }
+    });
 
 </script>
 <script src="../vendor/jquery/jquery.js"></script>

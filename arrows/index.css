@@ -57,6 +57,13 @@ body {
     margin: 0 auto;
     padding: 3em;
     width: 500px;
+    min-width: 340px;
+}
+
+@media (max-width: 500px) {
+.banner_wrapper {
+    width: 100%;
+}
 }
 
 
@@ -73,7 +80,8 @@ body {
     padding-left: 30px;
     background-color: #444;
     color: #fff;
-    border-radius: 5px 5px 0px 0px
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
 }
 
 h2 img {
@@ -234,6 +242,7 @@ section#leaderboard {
 
 #main-top {
     margin-top: 50px;
+    padding: 0 20px;
 }
 
 .main-top-info {
@@ -245,11 +254,15 @@ section#leaderboard {
 p.main-top-info-text {
     font-size: 22px;
     color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 50px;
 }
 
 p.main-center-info {
     font-size: 16px;
     opacity: 0.75;
+    text-align: center;
 }
 
 p.alinea-header-big {
@@ -260,4 +273,8 @@ p.alinea-header-big {
 p.alinea-header {
     margin: 30px auto 0 auto;
     font-size: 22px;
+}
+
+.app-store-logo-svg {
+    font-size: 60px;
 }
