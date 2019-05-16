@@ -28,49 +28,92 @@
     </header>
 </div>
 
-<!--<section id="info" style="margin-top: 20px">-->
-<!--<div class="container box">-->
-<!--<div class="row" style="padding: 35px">-->
-<!--<img src="logo.png" class="logo">-->
-<!--<div class="app-store-button">-->
-<!--<img src="app-store.png" class="app-store-logo">-->
-<!--<p class="app-store-label">Available in the App Store</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="row" style="padding: 35px">-->
-<!--informatie-->
-<!--</div>-->
-<!--</div>-->
+<section id="main-top">
+    <div class="container">
+        <div class="row">
+            <img src="logo.png" class="logo center-logo">
+        </div>
+        <div class="row">
+<!--            <div class="app-store-button">-->
+<!--                <img src="app-store.png" class="app-store-logo">-->
+<!--                <p class="app-store-label">Available in the App Store</p>-->
+<!--            </div>-->
+        </div>
+        <hr style="margin-top: 50px;">
+        <div class="row main-top-info text-faded">
+            <p class="text-faded alinea-header-big">Mijn eerste IOS applicatie</p>
+            <p class="main-top-info-text">Deze IOS game heb ik mijn vrije tijd ontwikkeld om ervaring op te doen op het
+                gebied van IOS development. Bij dit project heb ik gebruik gemaakt van het Sprite-Kit framework en
+                Firebase (online database van
+                Google).</p>
+            <p class="text-faded alinea-header">Hoe werkt het?</p>
+            <p class="main-center-info text-faded">Dit spel speel je over de lengte
+                van je mobiele telefoon. Er komen pijlen in beeld die naar links en rechts wijzen die vervolgens door de
+                gebruiker naar de juiste kant moeten worden gestuurd. Dit kan door op de linker- of rechterkant van je
+                beeldscherm te klikken. Als de pijl uit het scherm is of wanneer de gebruiker op de verkeerde kant heeft
+                geklikt, is het GameOver en krijgt de gebruiker zijn behaalde score te zien.</p>
+            <p class="text-faded alinea-header">Database synchronisatie</p>
+            <p class="main-center-info text-faded">Omdat deze applicatie verbonden is met een online database kan er
+                alleen data worden opgeslagen als het mobiele device is verbonden met het internet. Alle gegevens worden
+                op de telefoon opgeslagen ongeacht of het device een internet verbinding heeft. Alleen het online
+                opslaan vereist dus internet. Als er gegevens op de telefoon staan die nieuwer zijn de gegevens in de
+                database, dan worden deze oude gegevens vervangen zodra er een internet verbinding is gedetecteerd.
+            </p>
+            <p class="text-faded alinea-header">Leaderboard systeem</p>
+            <p class="main-center-info text-faded">Het mooie aan FireBase is dat je ook je data kan ophalen op een
+                website of een ander operating system. Om er een kleine competitieve draai aan te geven heb ik een
+                webpagina gemaakt waarin de beste score's te zien zijn. Zo kunnen de 100 beste mensen laten zien hoe
+                goed zij zijn in dit spel. Onderaan de pagina is het <a href="#leaderboard"
+                                                                        class="page-scroll text-faded"><u>leaderboard</u></a>
+                te vinden.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--<section id="info">-->
+<!--    <div class="container box">-->
+<!--        <div class="row" style="padding: 35px">-->
+<!--            <img src="logo.png" class="logo">-->
+<!--            <div class="app-store-button">-->
+<!--                <img src="app-store.png" class="app-store-logo">-->
+<!--                <p class="app-store-label">Available in the App Store</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row" style="padding: 35px">-->
+<!--            informatie-->
+<!--        </div>-->
+<!--    </div>-->
 <!--</section>-->
 
-<!--<section id="leaderboard" style="width: 100%;">-->
-<!--<div class="page_wrapper">-->
-<!--<div class="banner">-->
-<!--<div class="wrapper">-->
-<!--<div class="banner_content">-->
-<!--<div class="banner_wrapper">-->
-<!--<div class="container-lb">-->
-<!--<h2 class="title"><img-->
-<!--src="http://findicons.com/files/icons/2799/flat_icons/256/trophy.png">-->
-<!--TOP 100 LEADERBOARD</h2>-->
-<!--<ol id="board" class="leaderboard">-->
-<!--</ol>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
+<section id="leaderboard">
+    <div class="page_wrapper">
+        <div class="banner">
+            <div class="wrapper">
+                <div class="banner_content">
+                    <div class="banner_wrapper">
+                        <div class="container-lb">
+                            <h2 class="title"><img
+                                    src="http://findicons.com/files/icons/2799/flat_icons/256/trophy.png">
+                                TOP 100 LEADERBOARD</h2>
+                            <ol id="board" class="leaderboard">
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- MAINTENANCE OPTION -->
-<div class="container" style="text-align: center; margin-top: 100px">
-    <!--<div class="row">-->
-    <h1 style="font-weight: bold">Binnenkort online</h1>
-    <hr style="border: 1px solid black; margin: auto;">
-    <p class="text-center">Bedankt voor uw begrip </p>
-    <!--</div>-->
-</div>
+<!--<div class="container" style="text-align: center; margin-top: 100px">-->
+<!--    &lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--    <h1 style="font-weight: bold">Binnenkort online</h1>-->
+<!--    <hr style="border: 1px solid black; margin: auto;">-->
+<!--    <p class="text-center">Bedankt voor uw begrip </p>-->
+<!--    &lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
 <!-- END -->
 
 <script>
@@ -150,6 +193,8 @@
     // });
 
 </script>
-
+<script src="../vendor/jquery/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ body {
 
 .wrapper {
     height: 100%;
-    background: #F05F40;
+    /*background: #F05F40;*/
     background-position: center;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .container-lb {
     justify-content: center;
-
+    margin-top: 40px;
 }
 
 .title {
@@ -172,9 +172,10 @@ small {
 }
 
 hr {
-    border-color: #F05F40;
+    border-color: #000000;
     border-width: 3px;
     max-width: 50px;
+    margin: auto;
 }
 
 .box {
@@ -193,15 +194,19 @@ img.logo {
     border-radius: 25%;
 }
 
+img.center-logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .app-store-button {
-    position: absolute;
     width: 250px;
     height: 54px;
     border-radius: 13px;
-    background-color: #fff;
-    margin-top: 275px;
+    background-color: #0582bd;
     display: flex;
-    border: 2px solid #00aaf0;
+    border: 2px solid #fff;
+    margin: 10px auto auto;
 }
 
 img.app-store-logo {
@@ -212,7 +217,47 @@ img.app-store-logo {
 }
 
 p.app-store-label {
-    color: #00aaf0;
+    color: #fff;
     margin: auto;
     font-size: 16px;
+}
+
+section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+section#leaderboard {
+    background-color: #252525;
+    margin-top: 50px;
+}
+
+#main-top {
+    margin-top: 50px;
+}
+
+.main-top-info {
+    text-align: center;
+    margin: 50px auto auto;
+    justify-content: center;
+}
+
+p.main-top-info-text {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+p.main-center-info {
+    font-size: 16px;
+    opacity: 0.75;
+}
+
+p.alinea-header-big {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+p.alinea-header {
+    margin: 30px auto 0 auto;
+    font-size: 22px;
 }
