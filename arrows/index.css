@@ -278,3 +278,28 @@ p.alinea-header {
 .app-store-logo-svg {
     font-size: 60px;
 }
+
+.portfolio-items {
+    justify-content: center;
+}
+
+
+@media (min-width: 991px) {
+    .portfolio-items {
+    margin: auto 100px;
+}
+}
+
+@media (min-width: 1200px) {
+    .portfolio-items {
+        margin: auto 0;
+    }
+}
+
+img.portfolio-screenshot {
+    height: 530px;
+    width: 260px;
+    margin: 20px 5px;
+    border-radius: 25px;
+    border: 3px solid black;
+}
