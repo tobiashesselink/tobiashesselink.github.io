@@ -26,7 +26,106 @@
         offset: {
             top: 100
         }
+    });
+
+    $(document).on('scroll', function() {
+        if($(this).scrollTop()>=$('#piano').position().top - 500){
+            animatePiano();
+        }
     })
+
+    function animatePiano() {
+
+
+        $(".piano-keys").animate({
+            height: '0px'
+        }, 0, function () {
+            $('.piano-keys').css('height', '250px');
+            $('.piano-keys').css('visibility', 'visible');
+        });
+
+        $("#pianokey1").animate({
+            backgroundColor:'#fff'
+        }, 500, function () {
+            $('#pianokey1').css('background-color', 'white');
+        });
+
+        $("#pianokey2").animate({
+            backgroundColor:'#fff'
+        }, 750, function () {
+            $('#pianokey2').css('background-color', 'black');
+        });
+
+        $("#pianokey3").animate({
+            backgroundColor:'#fff'
+        }, 1000, function () {
+            $('#pianokey3').css('background-color', 'white');
+            $('.piano-key-letter').css('visibility', 'visible');
+        });
+
+        $("#pianokey4").animate({
+            backgroundColor:'#fff'
+        }, 1250, function () {
+            $('#pianokey4').css('background-color', 'black');
+        });
+
+        $("#pianokey5").animate({
+            backgroundColor:'#fff'
+        }, 1500, function () {
+            $('#pianokey5').css('background-color', 'white');
+        });
+        $("#pianokey6").animate({
+            backgroundColor:'#fff'
+        }, 1750, function () {
+            $('#pianokey6').css('background-color', 'white');
+        });
+
+        $("#pianokey7").animate({
+            backgroundColor:'#fff'
+        }, 2000, function () {
+            $('#pianokey7').css('background-color', 'black');
+        });
+
+        $("#pianokey8").animate({
+            backgroundColor:'#fff'
+        }, 2250, function () {
+            $('#pianokey8').css('background-color', 'white');
+        });
+
+        $("#pianokey9").animate({
+            backgroundColor:'#fff'
+        }, 2500, function () {
+            $('#pianokey9').css('background-color', 'black');
+        });
+
+        $("#pianokey10").animate({
+            backgroundColor:'#fff'
+        }, 2750, function () {
+            $('#pianokey10').css('background-color', 'white');
+        });
+
+        $("#pianokey11").animate({
+            backgroundColor:'#fff'
+        }, 3000, function () {
+            $('#pianokey11').css('background-color', 'black');
+        });
+
+        $("#pianokey12").animate({
+            backgroundColor:'#fff'
+        }, 3250, function () {
+            $('#pianokey12').css('background-color', 'white');
+        });
+    }
+
+    //     $('.piano-key-white').hover(
+    //         function (event) {
+    //             $('.piano-key-white').css('background-color', '#cb0010')
+    //         },
+    //         function (event) {
+    //             $('.piano-key-white').css('background-color', '#fff')
+    //         }
+    //     )
+    // }
 
     // $(".portfolio-item").hover(
     //     function(event) {
@@ -89,6 +188,8 @@
             });
 
             moveCursorAnimation()
+
+            // animatePiano()
 
         } else {
             //...
