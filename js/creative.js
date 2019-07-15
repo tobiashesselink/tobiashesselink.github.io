@@ -115,6 +115,14 @@
         }, 3250, function () {
             $('#pianokey12').css('background-color', 'white');
         });
+
+        // TODO: JQuery not working offline, checking animation later on
+
+        // $("#piano-content").animate({
+        //     opacity:'0'
+        // }, 3250, function () {
+        //     $('#piano-content').css('opacity', '1');
+        // });
     }
 
     //     $('.piano-key-white').hover(

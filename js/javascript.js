@@ -3,14 +3,14 @@ function pdf_viewer_transition() {
     var y = document.getElementById("pdf_button");
 
     if (x.style.height === "0px") {
-        x.style.height = "950px";
+        x.style.height = "850px";
         x.style.width = "100%";
         x.style.transition = "height 2s";
-        y.innerText = "Klik om CV te verbergen";
+        y.innerText = "Inklappen";
     } else {
         x.style.height = "0px";
         x.style.width = "100%";
         x.style.transition = "height 2s";
-        y.innerText = "Klik om CV te tonen";
+        y.innerText = "Uitklappen";
     }
 }

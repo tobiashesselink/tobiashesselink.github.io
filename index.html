@@ -25,7 +25,8 @@
     <meta name="viewport" content="height=device-height, initial-scale=1">
 
     <!-- Link animations (fade-in on scrolling) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Uncomment next line for animations, used for offline editing -->
+    <!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -77,7 +78,7 @@
                     <a class="page-scroll" href="#piano">Piano</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#stage">Stage / CV</a>
+                    <a class="page-scroll" href="#stage">CV</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -158,8 +159,9 @@
                     <p class="text-muted">Ik heb met mijn studie al veel ervaring opgedaan op verschillende gebieden van
                         software/ontwikkelings talen.
                         Ook vind ik het erg leuk om in mijn vrije tijd te experimenteren met nieuwe talen.<br>Talen en
-                        OS's waar ik ervaring mee heb zijn:
-                        Android, IOS, Java, HTML, CSS, Laravel, PHP, C++ en Swift.<br><br>Naast mijn studie zou ik het
+                        Frameworks waar ik ervaring mee heb zijn:
+                        Android, IOS, Java, HTML, CSS, Laravel, PHP, React, SpriteKit, C++ en Swift.<br><br>Naast mijn
+                        studie zou ik het
                         leuk vinden om in de buurt een bijbaantje te
                         hebben op het gebied van Software Ontwikkelaar. Mocht u mij daar bij kunnen helpen, dan kunt u
                         via <a class="page-scroll" href="#contact">hier</a>
@@ -182,17 +184,41 @@
             <div class="piano-keys">
                 <div class="piano-key-white-first" id="pianokey1"></div>
                 <div class="piano-key-black" id="pianokey2"></div>
-                <div class="piano-key-white" id="pianokey3"><div class="piano-key-letter">P</div></div>
+                <div class="piano-key-white" id="pianokey3">
+                    <div class="piano-key-letter">P</div>
+                </div>
                 <div class="piano-key-black" id="pianokey4"></div>
-                <div class="piano-key-white" id="pianokey5"><div class="piano-key-letter">i</div></div>
-                <div class="piano-key-white-first" id="pianokey6"><div class="piano-key-letter">a</div></div>
+                <div class="piano-key-white" id="pianokey5">
+                    <div class="piano-key-letter">i</div>
+                </div>
+                <div class="piano-key-white-first" id="pianokey6">
+                    <div class="piano-key-letter">a</div>
+                </div>
                 <div class="piano-key-black" id="pianokey7"></div>
-                <div class="piano-key-white" id="pianokey8"><div class="piano-key-letter">n</div></div>
+                <div class="piano-key-white" id="pianokey8">
+                    <div class="piano-key-letter">n</div>
+                </div>
                 <div class="piano-key-black" id="pianokey9"></div>
-                <div class="piano-key-white" id="pianokey10"><div class="piano-key-letter">o</div></div>
+                <div class="piano-key-white" id="pianokey10">
+                    <div class="piano-key-letter">o</div>
+                </div>
                 <div class="piano-key-black" id="pianokey11"></div>
                 <div class="piano-key-white" id="pianokey12"></div>
             </div>
+        </div>
+    </div>
+    <div class="piano-content" id="piano-content">
+        <div class="piano-title">
+            <h2 class="section-heading" style="color: white">Piano</h2>
+            <hr>
+        </div>
+        <p class="piano-information" id="piano-information">In mijn vrije tijd ben ik vaak te vinden achter de piano. Ik
+            speel niet alleen de
+            laatste hits maar componeer ook mijn eigen muziek. Inmiddels een paar jaar geleden heb ik veel nummers
+            opgenomen en op het internet geplaatst. U kunt mij zowel vinden op YouTube als Facebook.</p>
+        <div class="piano-video-container">
+            <div class="piano-videobox">Video</div>
+            <div class="piano-videobox">Video</div>
         </div>
     </div>
 </section>
@@ -201,37 +227,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2 class="section-heading">Stage</h2>
+                <h2 class="section-heading">Mijn CV</h2>
                 <hr class="light">
-                <p class="text-faded">In het begin van het 3e jaar van mijn studie is het de bedoeling dat ik een half
-                    jaar stage ga lopen.
-                    Het starten van de stage zal plaats vinden wanneer het volgende schooljaar (2019-2020) begint.
-                    <br>
-                    <br>
-                    Ik ben opzoek naar een bedrijf dat zich bezig houdt met het ontwikkelen van software. Denk
-                    bijvoorbeeld aan het ontwikkelen van
-                    websites en applicaties voor zowel Android als IOS. Aangezien ik een Apple fan ben en gebruik maak
-                    van Apple devices, lijkt het mij het leukst om software
-                    voor IOS systemen te ontwikkelen. Omdat ik al eens applicaties heb ontwikkeld voor IOS heb ik al
-                    ervaring met xCode, een bekend programma onder
-                    de Apple ontwikkelaars wat onder andere gebruik maakt van Swift.
-                    <br>
-                    <br>
-                    Kunt u, of iemand die u kent, mij hierbij helpen? Of wilt u meer informatie?
-                    <br>
-                    Dan zou ik het erg waarderen als u contact met mij zou opnemen d.m.v. <a href="#contact"
-                                                                                             class="page-scroll text-faded"><u>deze
-                        contact gegevens.</u></a>
-                    <br>
-                    <br>
-                    <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" id="pdf_button"
-                       onclick="pdf_viewer_transition()" class="btn btn-primary btn-xl page-scroll for-desktop"
-                       style="background-color: black">Klik hier voor mijn CV</a>
-                    <a class="for-mobile" href="img/CV%20Tobias%20Hesselink.pdf" target="_blank"
-                       style="color: black; font-size: 13px"><b><u>Het is niet mogelijk om een PDF te tonen op dit
-                        device, klik hier om mijn CV te openen</u></b></a>
+                <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" id="pdf_button"
+                   onclick="pdf_viewer_transition()" class="btn btn-primary btn-xl page-scroll for-desktop"
+                   style="background-color: black; margin-top: 50px">Uitklappen</a>
+                <a class="for-mobile" href="img/CV%20Tobias%20Hesselink.pdf" target="_blank"
+                   style="color: black; font-size: 17px"><b><u>Download en open CV in een nieuw tablad</u></b></a>
                 </p>
-                <object id="pdf_viewer" class="pdf-viewer for-desktop" style="height: 0px; transition: height 2s"
+                <object id="pdf_viewer" class="pdf-viewer for-desktop" style="height: 0; transition: height 2s"
                         data="img/CV%20Tobias%20Hesselink.pdf" type="application/pdf">
                     <p style="color: black">Het lijkt er op dat je geen PDF plugin hebt..
                         <a href="img/CV%20Tobias%20Hesselink.pdf" target="_blank" style="color: black"><b><u>Klik hier
@@ -266,9 +270,11 @@
                     <hr style="margin-left: 275px">
                     <h3 class="overlay-text" style="color: #c2c2c2">App / Game</h3>
                     <div class="vertical-line"></div>
-                    <p class="text-faded overlay-text-descr">Arrows is een applicatie voor IOS. Ik heb deze app ontwikkeld in mijn vrije tijd om te experimenteren met
-                        het 'Sprite-Kit' framework en het uitwisselen van data met een online Database.<br>Bij dit spel gaat het er om wie de hoogste score haalt. De 100
-                    beste scores zijn terug te vinden in een online leaderboard.</p>
+                    <p class="text-faded overlay-text-descr">Arrows is een applicatie voor IOS. Ik heb deze app
+                        ontwikkeld in mijn vrije tijd om te experimenteren met
+                        het 'Sprite-Kit' framework en het uitwisselen van data met een online Database.<br>Bij dit spel
+                        gaat het er om wie de hoogste score haalt. De 100
+                        beste scores zijn terug te vinden in een online leaderboard.</p>
                 </div>
             </div>
         </div>
@@ -315,7 +321,7 @@
 <!-- Scroll animation -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init();
+    // AOS.init();
 </script>
 
 </body>

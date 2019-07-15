@@ -4,10 +4,9 @@ section.piano-section {
     padding: 50px;
 }
 
-@media (max-width: 912px){
-    .piano-section {
-        display: none;
-    }
+.piano-title {
+    display: none;
+    text-align: center;
 }
 
 .piano-header {
@@ -63,4 +62,14 @@ section.piano-section {
     margin-top: 180%;
     color: #575757;
     visibility: hidden;
+}
+
+@media (max-width: 912px){
+    .piano-container {
+        display: none;
+    }
+
+    .piano-title {
+        display: block;
+    }
 }
