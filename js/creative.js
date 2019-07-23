@@ -31,6 +31,8 @@
     $(document).on('scroll', function() {
         if($(this).scrollTop()>=$('#piano').position().top - 500){
             animatePiano();
+            $('.piano-content').css('opacity', '1');
+            $('.piano-content').css('padding-top', '0px');
         }
     })
 
@@ -115,14 +117,6 @@
         }, 3250, function () {
             $('#pianokey12').css('background-color', 'white');
         });
-
-        // TODO: JQuery not working offline, checking animation later on
-
-        // $("#piano-content").animate({
-        //     opacity:'0'
-        // }, 3250, function () {
-        //     $('#piano-content').css('opacity', '1');
-        // });
     }
 
     //     $('.piano-key-white').hover(

@@ -640,8 +640,10 @@ p.overlay-text-descr {
 }
 
 .piano-content {
-    /*opacity: 0;*/
-    transition: 0.5s;
+    opacity: 0;
+    transition: 2s;
+    padding-top: 250px;
+
 }
 
 .piano-information {
@@ -657,26 +659,88 @@ p.overlay-text-descr {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 75px;
 }
 
 .piano-videobox {
     max-width: 550px;
     width: 40%;
     height: 275px;
-    background-color: whitesmoke;
     margin: auto;
-    border: 2px #060606 solid;
-    border-radius: 7px;
+    border: none;
+    /*border-radius: 7px;*/
 }
 
 @media (max-width: 1150px){
     .piano-video-container {
     flex-direction: column;
+        margin-top: 50px;
 }
     .piano-videobox {
         margin: 25px auto;
-        width: 65%;
+        width: 100%;
     }
 }
 
+@media (max-width: 500px){
+    .piano-videobox {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.piano-video-fb-container {
+    justify-content: center;
+    display: flex;
+}
+
+.piano-video-fb {
+    height: 100%;
+    width: 45%;
+    min-height: 315px;
+}
+
+@media (max-width: 1150px){
+    .piano-video-fb {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 540px){
+    .piano-video-fb {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 390px){
+    .piano-video-fb {
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 1340px){
+    .piano-video-fb {
+        min-height: 365px;
+    }
+}
+
+@media (min-width: 1500px){
+    .piano-video-fb {
+        min-height: 420px;
+    }
+}
+
+.piano-fb-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 75px;
+    font-size: 19px;
+    opacity: 0.75;
+}
+
+@media (max-width: 1150px){
+    .piano-fb-title{
+        margin-top: 30px;
+    }
+}

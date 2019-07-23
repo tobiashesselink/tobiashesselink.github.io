@@ -26,7 +26,7 @@
 
     <!-- Link animations (fade-in on scrolling) -->
     <!-- Uncomment next line for animations, used for offline editing -->
-    <!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -113,7 +113,7 @@
                 <h2 class="section-heading">Wie ben ik?</h2>
                 <hr class="light">
                 <p data-aos="fade-in" data-aos-delay="350" data-aos-duration="1000" class="text-faded">Ik ben Tobias,
-                    een tweede jaars HBO-ICT student. Ik ben 19 jaar oud en kom uit Borne (Overijssel). <br>Omdat ik nu
+                    een derde jaars HBO-ICT student. Ik ben 19 jaar oud en kom uit Borne (Overijssel). <br>Omdat ik nu
                     enige kennis heb op het gebied van diverse ontwikkelings platformen, vond ik het leuk om op een
                     creatieve manier software te ontwikkelen. Daarom heb ik in mijn vrije tijd deze website ontwikkeld
                     zodat u meer te weten kan komen over mij. </p>
@@ -142,7 +142,7 @@
                     <br>
                     <h3>Piano</h3>
                     <p class="text-muted">Een van mijn grootste hobby's is het bespelen van de piano. Ik speel sinds
-                        mijn 8e en ben regelmatig op verschillende
+                        mijn 9e en ben regelmatig op verschillende
                         plekken te vinden zoals restaurants, markten, bruiloften, bands, evenementen etc.<br>Nieuwschierig?
                         Op
                         <a href="https://www.facebook.com/tobiass.hesselinkk/videos_by?lst=100004640731091%3A100004640731091%3A1551096881"
@@ -214,11 +214,15 @@
         </div>
         <p class="piano-information" id="piano-information">In mijn vrije tijd ben ik vaak te vinden achter de piano. Ik
             speel niet alleen de
-            laatste hits maar componeer ook mijn eigen muziek. Inmiddels een paar jaar geleden heb ik veel nummers
+            laatste hits maar componeer ook mijn eigen muziek. Een paar jaar geleden heb ik veel nummers
             opgenomen en op het internet geplaatst. U kunt mij zowel vinden op YouTube als Facebook.</p>
         <div class="piano-video-container">
-            <div class="piano-videobox">Video</div>
-            <div class="piano-videobox">Video</div>
+            <iframe allowfullscreen="allowfullscreen" class="piano-videobox" src="https://www.youtube.com/embed/OBpvyBJTS2c"></iframe>
+            <iframe allowfullscreen="allowfullscreen" class="piano-videobox" src="https://www.youtube.com/embed/hbOFTnjNcU4"></iframe>
+        </div>
+        <p class="piano-fb-title">Mijn meest bekeken Facebook video</p>
+        <div class="piano-video-fb-container">
+            <iframe class="piano-video-fb" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ftobiass.hesselinkk%2Fvideos%2F571875142977172%2F&show_text=0&width=560"  scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
         </div>
     </div>
 </section>
@@ -229,7 +233,7 @@
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="section-heading">Mijn CV</h2>
                 <hr class="light">
-                <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" id="pdf_button"
+                <a data-aos="fade-up" data-aos-duration="500" id="pdf_button"
                    onclick="pdf_viewer_transition()" class="btn btn-primary btn-xl page-scroll for-desktop"
                    style="background-color: black; margin-top: 50px">Uitklappen</a>
                 <a class="for-mobile" href="img/CV%20Tobias%20Hesselink.pdf" target="_blank"
@@ -321,7 +325,7 @@
 <!-- Scroll animation -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    // AOS.init();
+    AOS.init();
 </script>
 
 </body>
