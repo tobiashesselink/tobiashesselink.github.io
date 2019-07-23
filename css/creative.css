@@ -731,11 +731,19 @@ p.overlay-text-descr {
     }
 }
 
-.piano-fb-title {
+.piano-fb-title-2 {
+    font-size: 14px;
     text-align: center;
     color: #fff;
     margin-top: 75px;
+    opacity: 0.6;
+}
+
+.piano-fb-title{
+    text-align: center;
+    color: #fff;
     font-size: 19px;
+    margin-top: 75px;
     opacity: 0.75;
 }
 
