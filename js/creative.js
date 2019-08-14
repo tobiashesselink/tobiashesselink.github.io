@@ -164,29 +164,56 @@
 
     $(function() {
         if (window.matchMedia('(min-width: 992px)').matches) {
-            $('.overlay').hover(function() {
-                $('.portfolio-item').css('left', '0');
-                $('.portfolio-item').css('margin-left', '0');
-                $('.overlay').css('opacity', '1');
+            $('.overlay-item-1').hover(function() {
+                $('.portfolio-item-1').css('left', '0');
+                $('.portfolio-item-1').css('margin-left', '0');
+                $('.overlay-item-1').css('opacity', '1');
             }, function() {
                 // on mouseout, reset the background colour
-                $('.portfolio-item').css('left', '50%');
-                $('.portfolio-item').css('margin-left', '-125px');
-                $('.overlay').css('opacity', '0');
-                $('.overlay').css('visibility', 'hidden');
+                $('.portfolio-item-1').css('left', '50%');
+                $('.portfolio-item-1').css('margin-left', '-125px');
+                $('.overlay-item-1').css('opacity', '0');
+                $('.overlay-item-1').css('visibility', 'hidden');
             });
 
-            $('.portfolio-item').hover(function() {
+            $('.portfolio-item-1').hover(function() {
                 stopCursorAnimation();
-                $('.portfolio-item').css('left', '0');
-                $('.portfolio-item').css('margin-left', '0');
-                $('.overlay').css('opacity', '1');
-                $('.overlay').css('visibility', 'visible');
+                $('.portfolio-item-1').css('left', '0');
+                $('.portfolio-item-1').css('margin-left', '0');
+                $('.overlay-item-1').css('opacity', '1');
+                $('.overlay-item-1').css('visibility', 'visible');
             }, function() {
                 // on mouseout, reset the background colour
-                $('.portfolio-item').css('left', '50%');
-                $('.portfolio-item').css('margin-left', '-125px');
-                $('.overlay').css('opacity', '0');
+                $('.portfolio-item-1').css('left', '50%');
+                $('.portfolio-item-1').css('margin-left', '-125px');
+                $('.overlay-item-1').css('opacity', '0');
+            });
+
+
+            // second item
+            $('.overlay-item-2').hover(function() {
+                $('.portfolio-item-2').css('left', '0');
+                $('.portfolio-item-2').css('margin-left', '0');
+                $('.overlay-item-2').css('opacity', '1');
+            }, function() {
+                // on mouseout, reset the background colour
+                $('.portfolio-item-2').css('left', '50%');
+                $('.portfolio-item-2').css('margin-left', '-125px');
+                $('.overlay-item-2').css('opacity', '0');
+                $('.overlay-item-2').css('visibility', 'hidden');
+            });
+
+            $('.portfolio-item-2').hover(function() {
+                stopCursorAnimation();
+                $('.portfolio-item-2').css('left', '0');
+                $('.portfolio-item-2').css('margin-left', '0');
+                $('.overlay-item-2').css('opacity', '1');
+                $('.overlay-item-2').css('visibility', 'visible');
+            }, function() {
+                // on mouseout, reset the background colour
+                $('.portfolio-item-2').css('left', '50%');
+                $('.portfolio-item-2').css('margin-left', '-125px');
+                $('.overlay-item-2').css('opacity', '0');
             });
 
             moveCursorAnimation()
